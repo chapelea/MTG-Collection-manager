@@ -1,0 +1,22 @@
+<h1>Sets</h1>
+<h4><a href="/">Home</a></h4>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Set Name</th>
+        <th>Set Code</th>
+    </tr>
+    {{#each sets}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{set_name}}</td>
+        <td>{{set_code}}</td>
+        <td><a style="color:purple" href="/editSet/{{set_name}}">Edit</a></td>
+        <td><a style="color:red" href="/deleteSet/{{set_name}}">Delete</a></td>
+    </tr>
+    {{/each}}
+</table>
+<div><p></p></div>
+<div>
+    <a style="color:seagreen" href="/addSet">Add Set</a>
+</div>

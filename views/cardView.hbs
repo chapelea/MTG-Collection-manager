@@ -1,0 +1,50 @@
+<h1>{{card_name}}</h1>
+<h4><a href="/">Home</a></h4>
+{{#each cards}}
+<h4><a style="color:purple" href="/edit/{{card_name}}">Edit Card</a></h4>
+<h4><a style="color:red" href="/deleteConf/{{card_name}}">Delete Card</a></h4>
+{{/each}}
+{{#if hasImg}}
+    <img src="/images/{{img_file}}" width="400" height="500"/>
+{{/if}}
+<table>
+    {{#each cards}}
+    <tr>
+        <th>Card Type:</th>
+        <td>{{card_type}}</td>
+    </tr>
+    <tr>
+        <th>Color:</th>
+        <td>{{color}}</td>
+    </tr>
+    <tr>
+        <th>Rarity:</th>
+        <td>{{rarity}}</td>
+    </tr>
+    <tr>
+        <th>Collector Number:</th>
+        <td>{{collector_number}}</td>
+    </tr>
+    {{/each}}
+    {{#each sets}}
+    <tr>
+        <th>Set Name:</th>
+        <td>{{set_name}}</td>
+    </tr>
+    <tr>
+        <th>Set Code:</th>
+        <td>{{set_code}}</td>
+    </tr>
+    {{/each}}
+    {{#each artists}}
+    <tr>
+        <th>Artist:</th>
+        <td>{{artist_name}}</td>
+    </tr>
+    {{/each}}
+</table>
+<form action="/photo/{{card_name}}" method="post" enctype="multipart/form-data">
+  <label>Photo: </label><input type="file" name="photo" />
+  <button type="submit">Upload</button>
+</form>
+<a href="/deletePhoto/{{card_name}}">Delete Current Photo</a>

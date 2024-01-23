@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+<h4><a href="/">Home</a></h4>
+<p>Welcome to {{title}}</p>
+<table>
+    <tr>
+        <th>
+            <a href={{nameSort}}>Card Name</a><br />
+            <form>
+                <input name="name_search" />
+            </form>
+        </th>
+        <th>
+            <a href={{typeSort}}>Card Type</a><br />
+            <form>
+                <input name="type_search" />
+            </form>
+        </th>
+        <th>
+            <a href={{colorSort}}>Card Color</a><br />
+            <form>
+                <input name="color_search" />
+            </form>
+        </th>
+        <th>
+            <a href={{raritySort}}>Card Rarity</a><br />
+            <form>
+                <input name="rarity_search" />
+            </form>
+        </th>
+    </tr>
+    {{#each cards}}
+    <tr>
+        <td><a href ="/cardView/{{card_name}}">{{card_name}}</a></td>
+        <td>{{card_type}}</td>
+        <td>{{color}}</td>
+        <td>{{rarity}}</td>
+        <td><a style="color:purple" href="/edit/{{card_name}}">Edit</a></td>
+        <td><a style="color:red" href="/deleteConf/{{card_name}}">Delete</a></td>
+    </tr>
+    {{/each}}
+</table>
+<div><p></p></div>
+<div>
+    <a style="color:seagreen" href="/addCard">Add Card</a>
+</div>
+<div>
+    <a style="color:seagreen" href="/sets">View Sets</a>
+</div>
+<div>
+    <a style="color:seagreen" href="/artists">View Artists</a>
+</div>

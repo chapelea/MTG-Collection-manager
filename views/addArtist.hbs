@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Add Artist</h1>
+  {{#each errors}}
+  <div class="alert alert-danger">
+    {{ this }}
+  </div>
+  {{/each}}
+  <form method="post">
+    <div class="form-group">
+      <label for="artist_name">Artist</label>
+      <input
+        class="form-control"
+        id="artist_name"
+        type="name"
+        name="artist_name"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+  <a href="/">Cancel</a>
+  
+</div>

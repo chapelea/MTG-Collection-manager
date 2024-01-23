@@ -1,0 +1,105 @@
+<div class="container">
+  <h1>Edit Collectable</h1>
+  <h4><a href="/">Home</a></h4>
+  {{#each errors}}
+  <div class="alert alert-danger">
+    {{ this }}
+  </div>
+  {{/each}}
+  {{#each cards}}
+  <form method="post">
+    <div class="form-group">
+      <label for="card_name">Card Name</label>
+      <input
+        class="form-control"
+        id="card_name"
+        type="name"
+        name="card_name"
+        value="{{card_name}}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="card_type">Card Type</label>
+      <input
+        class="form-control"
+        id="card_type"
+        type="name"
+        name="card_type"
+        value="{{card_type}}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input
+        class="form-control"
+        id="color"
+        type="name"
+        name="color"
+        value="{{color}}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="rarity">Rarity</label>
+      <select
+        class="form-control"
+        id="rarity"
+        type="name"
+        name="rarity">
+        <option>{{rarity}}</option>
+        {{#if ../is_mythic}}
+        <option>Common</option>
+        <option>Uncommon</option>
+        <option>Rare</option>
+        {{/if}}
+        {{#if ../is_common}}
+        <option>Mythic Rare</option>
+        <option>Uncommon</option>
+        <option>Rare</option>
+        {{/if}}
+        {{#if ../is_uncommon}}
+        <option>Common</option>
+        <option>Mythic Rare</option>
+        <option>Rare</option>
+        {{/if}}
+        {{#if ../is_rare}}
+        <option>Common</option>
+        <option>Uncommon</option>
+        <option>Mythic Rare</option>
+        {{/if}}
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="collector_number">Collector Number</label>
+      <input
+        class="form-control"
+        id="collector_number"
+        type="name"
+        name="collector_number"
+        value={{collector_number}}
+      />
+    </div>
+    <div class="form-group">
+      <label for="set_id">Set Id</label>
+      <input
+        class="form-control"
+        id="set_id"
+        type="name"
+        name="set_id"
+        value={{set_id}}
+      />
+    </div>
+    <div class="form-group">
+      <label for="artist_id">Artist Id</label>
+      <input
+        class="form-control"
+        id="artist_id"
+        type="name"
+        name="artist_id"
+        value={{artist_id}}
+      />
+    </div>
+    {{/each}}
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+  
+</div>

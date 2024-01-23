@@ -1,0 +1,20 @@
+<h1>Artists</h1>
+<h4><a href="/">Home</a></h4>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Artist Name</th>
+    </tr>
+    {{#each artists}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{artist_name}}</td>
+        <td><a style="color:purple" href="/editArtist/{{artist_name}}">Edit</a></td>
+        <td><a style="color:red" href="/deleteArtist/{{artist_name}}">Delete</a></td>
+    </tr>
+    {{/each}}
+</table>
+<div><p></p></div>
+<div>
+    <a style="color:seagreen" href="/addArtist">Add Artist</a>
+</div>

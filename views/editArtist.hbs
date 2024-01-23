@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Edit Artist</h1>
+    {{#each artists}}
+    <form method="post">
+    <div class="form-group">
+    <label for="artist_name">Artist Name</label>
+    <input
+        class="form-control"
+        id="artist_name"
+        type="name"
+        name="artist_name"
+        value="{{artist_name}}"
+    />
+    </div>
+    {{/each}}
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+</div>

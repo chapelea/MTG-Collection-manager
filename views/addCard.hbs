@@ -1,0 +1,98 @@
+<div class="container">
+  <h1>Add Collectable</h1>
+  {{#each errors}}
+  <div class="alert alert-danger">
+    {{ this }}
+  </div>
+  {{/each}}
+  <h3>
+    <div>
+      <span style="color:red">If the set or artist of the card does not already exsist, please click the corresponing link below.</span>
+    </div>
+    <div>
+      <a href="/addSet">Add Set</a>
+      <a href="/addArtist">Add Artist</a>
+    </div>
+  </h3>
+  <form method="post">
+    <div class="form-group">
+      <label for="card_name">Card Name</label>
+      <input
+        class="form-control"
+        id="card_name"
+        type="name"
+        name="card_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="card_type">Card Type</label>
+      <input
+        class="form-control"
+        id="card_type"
+        type="name"
+        name="card_type"
+      />
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input
+        class="form-control"
+        id="color"
+        type="name"
+        name="color"
+      />
+    </div>
+    <div class="form-group">
+      <label for="rarity">Rarity</label>
+      <select
+        class="form-control"
+        id="rarity"
+        type="name"
+        name="rarity">
+        <option>Common</option>
+        <option>Uncommon</option>
+        <option>Rare</option>
+        <option>Mythic Rare</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="collector_number">Collector Number</label>
+      <input
+        class="form-control"
+        id="collector_number"
+        type="name"
+        name="collector_number"
+      />
+    </div>
+    <div class="form-group">
+      <label for="artist_name">Artist</label>
+      <input
+        class="form-control"
+        id="artist_name"
+        type="name"
+        name="artist_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="set_name">Set Name</label>
+      <input
+        class="form-control"
+        id="set_name"
+        type="name"
+        name="set_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="set_code">Set Code</label>
+      <input
+        class="form-control"
+        id="set_code"
+        type="name"
+        name="set_code"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+  <a href="/">Cancel</a>
+  
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Edit Set</h1>
+    {{#each sets}}
+    <form method="post">
+    <div class="form-group">
+    <label for="set_name">Set Name</label>
+    <input
+        class="form-control"
+        id="set_name"
+        type="name"
+        name="set_name"
+        value="{{set_name}}"
+    />
+    </div>
+    <div class="form-group">
+    <label for="set_code">Set Code</label>
+    <input
+        class="form-control"
+        id="set_code"
+        type="name"
+        name="set_code"
+        value="{{set_code}}"
+    />
+    </div>
+    {{/each}}
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    
+</div>
